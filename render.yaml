@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: metabase-light
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: MB_DB_CONNECTION_URI
+        value: postgresql://neondb_owner:npg_CoSe6z3XFiEN@ep-long-violet-a46sj9pb-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require
